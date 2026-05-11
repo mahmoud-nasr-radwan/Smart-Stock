@@ -1,0 +1,409 @@
+@import "tailwindcss";
+/* style.css */
+
+/* تأثير الكروت الزجاجية العلوية (Card_COMI, Card_ADIB, etc) */
+[id^="Card_"] {
+  background: rgba(22, 27, 34, 0.6) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid #30363d !important;
+  border-radius: 12px !important;
+  transition: all 0.3s ease !important;
+}
+
+[id^="Card_"]:hover {
+  border-color: #a6ff00 !important;
+  box-shadow: 0 0 15px rgba(94, 255, 0, 0.89);
+  transform: translateY(-4px);
+}
+
+/* منطقة الرسم البياني (Chart Comparison) */
+#chart-comparison-placeholder {
+  background: rgba(22, 27, 34, 0.4) !important;
+  border: 1px dashed #30363d !important;
+  border-radius: 16px !important;
+  min-height: 400px !important;
+}
+
+/* نصوص النيون الخضراء */
+.text-green-400 {
+  color: #1de280 !important;
+  text-shadow: 0 0 10px rgba(0, 255, 128, 0.4);
+}
+
+/* ستايل القائمة الجانبية (Sidebar) */
+aside {
+  background-color: #0d1117 !important;
+  border-right: 1px solid #71e92c !important;
+}
+
+/* تنسيق مفاتيح الرسم البياني (Legend) */
+#legend-placeholder span {
+  padding: 6px 12px;
+  background: rgba(90, 117, 148, 0.2);
+  border-radius: 20px;
+  border: 1px solid transparent;
+}
+
+/* السكرول بار الاحترافي */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00ff80;
+}
+
+:root {
+  --bg-dark: #0d1117;
+  --card-bg: rgba(22, 27, 34, 0.7);
+  --neon-green: #00ff80;
+  --border-gray: #30363d;
+}
+
+body {
+  background-color: var(--bg-dark) !important;
+  font-family: "Inter", sans-serif;
+}
+
+/* Glassmorphism Table Area */
+#table-placeholder-area > div {
+  background: var(--card-bg) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid var(--border-gray) !important;
+  box-shadow: 0 8px 32px rgba(17, 233, 53, 0.664);
+}
+
+/* Table Header Style */
+#table-placeholder-area .bg-gray-800\/50 {
+  background: rgba(0, 0, 0, 0.021) !important;
+  color: #8b949e !important;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  box-shadow: 0 0 10px rgba(44, 112, 49, 0.719);
+  border: 1px solid var(--neon-green) !important;
+}
+
+/* Row Hover Effect */
+#table-placeholder-area .flex.justify-around:not(.bg-gray-800\/50):hover {
+  background: rgba(25, 105, 29, 0.445) !important;
+  color: var(--neon-green) !important;
+  cursor: pointer;
+}
+
+/* Gauges Styling (Half Circles) */
+[id^="Gauge_"] {
+  background: rgba(22, 27, 34, 0.5) !important;
+  border: 1px solid var(--border-gray) !important;
+  border-bottom: none !important;
+  transition: all 0.3s ease;
+}
+
+[id^="Growth_Val_"] {
+  color: var(--neon-green) !important;
+  text-shadow: 0 0 8px rgba(0, 255, 128, 0.4);
+}
+
+/* Neon Sidebar Active (Optional but recommended) */
+nav a:hover {
+  color: var(--neon-green) !important;
+  background: rgba(0, 255, 128, 0.05) !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-gray);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-green);
+}
+
+/* System Pulse Dot */
+.animate-pulse {
+  box-shadow: 0 0 10px var(--neon-green);
+}
+/* Drop down menu */
+css
+/* style.css */
+
+:root {
+  --bg-dark: #0d1117;
+  --card-bg: rgba(22, 27, 34, 0.4);
+  --neon-green: #00ff80;
+  --border-gray: #1f2937;
+  --text-muted: #6b7280;
+}
+
+/* Base Styles */
+body {
+  background-color: var(--bg-dark) !important;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  color: #d1d5db;
+}
+
+/* Sidebar Customization */
+aside {
+  background-color: var(--bg-dark) !important;
+  border-right: 1px solid var(--border-gray) !important;
+}
+
+/* Active Profile Link Styling */
+.bg-green-500\/5 {
+  background: rgba(0, 255, 128, 0.05) !important;
+  border: 1px solid rgba(0, 255, 128, 0.1) !important;
+  color: var(--neon-green) !important;
+}
+
+/* Navigation Links Hover */
+nav a:hover:not(.bg-green-500\/5) {
+  background: rgba(255, 255, 255, 0.03) !important;
+  color: #ffffff !important;
+}
+
+/* Header & Typography */
+h1 {
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.font-mono {
+  font-family: "JetBrains Mono", "Fira Code", monospace !important;
+}
+
+/* The Big Price Text */
+#Price_COMI {
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Chart Container (Glassmorphism) */
+.h-112\.5 {
+  height: 450px;
+  background: var(--card-bg) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border-gray) !important;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Green Pulse Dot Shadow */
+.bg-green-500.rounded-full {
+  box-shadow: 0 0 10px var(--neon-green);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-green);
+}
+
+/* Overlay for Mobile */
+#overlay {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Menu Button Pulse for Mobile */
+label[for="menu-toggle"] {
+  transition: all 0.2s ease;
+}
+
+label[for="menu-toggle"]:active {
+  transform: scale(0.95);
+  background: rgba(0, 255, 128, 0.1);
+}
+
+/* style.css */
+
+:root {
+  --bg-dark: #0d1117;
+  --card-bg: rgba(22, 27, 34, 0.6);
+  --neon-green: #00ff80;
+  --border-gray: #30363d;
+}
+
+/* Base Styles */
+body {
+  background-color: var(--bg-dark) !important;
+  font-family: "Inter", sans-serif;
+  color: #d1d5db;
+}
+
+/* Sidebar Styling */
+aside {
+  background-color: var(--bg-dark) !important;
+  border-right: 1px solid var(--border-gray) !important;
+}
+
+/* Active Profile Link */
+.bg-green-500\/5 {
+  background: rgba(0, 255, 128, 0.103) !important;
+  border: 1px solid rgba(43, 255, 0, 0.89) !important;
+  color: var(--neon-green) !important;
+}
+
+/* Info Cards (Market Cap, P/E, etc.) */
+.cards-container-comi > div {
+  background: var(--card-blue) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border-orange) !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 20px rgba(30, 255, 0, 0.418);
+}
+
+.cards-container-comi > div:hover {
+  border-color: rgba(33, 202, 17, 0.377);
+  transform: translateY(-3px);
+}
+
+/* Big Chart Container */
+.h-112\.5 {
+  height: 450px !important;
+  background: rgba(48, 53, 59, 0.3) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-gray) !important;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Typography & Neon */
+h1 {
+  color: #ffffff;
+  letter-spacing: -0.03em;
+}
+
+.text-green-500 {
+  color: var(--neon-green) !important;
+}
+
+.bg-green-500.rounded-full {
+  box-shadow: 0 0 10px var(--neon-green);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-green);
+}
+
+/* Mobile Overlay */
+#overlay {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.main_comi {
+  box-shadow: inset 12px 8px 35px -6px rgba(0, 255, 0, 0.51);
+  border-radius: 16px;
+}
+.main_saud {
+  box-shadow: inset 12px 8px 35px -6px rgba(51, 136, 178, 0.51);
+  border-radius: 16px;
+}
+.main_adib {
+  box-shadow: inset 12px 8px 35px -6px rgba(255, 204, 0, 0.53);
+  border-radius: 16px;
+}
+.main_fait {
+  box-shadow: inset 12px 8px 35px -6px rgba(255, 0, 0, 0.53);
+  border-radius: 16px;
+}
+.main_hdbk {
+  box-shadow: inset 12px 8px 35px -6px rgba(197, 2, 190, 0.5);
+  border-radius: 16px;
+}
+.cards-container-saud > div {
+  background: var(--card-blue) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border-orange) !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 20px rgba(51, 136, 178, 0.51);
+}
+
+.cards-container-saud > div:hover {
+  border-color: rgba(51, 136, 178, 0.51);
+  transform: translateY(-3px);
+}
+.cards-container-adib > div {
+  background: var(--card-blue) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border-orange) !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 20px rgba(255, 204, 0, 0.53);
+}
+
+.cards-container-adib > div:hover {
+  border-color: rgba(255, 204, 0, 0.53);
+  transform: translateY(-3px);
+}
+.cards-container-fait > div {
+  background: var(--card-blue) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border-orange) !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 20px rgba(255, 0, 0, 0.53);
+}
+
+.cards-container-fait > div:hover {
+  border-color: rgba(255, 0, 0, 0.53);
+  transform: translateY(-3px);
+}
+.cards-container-hdbk > div {
+  background: var(--card-blue) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border-orange) !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 20px rgba(197, 2, 190, 0.5);
+}
+
+.cards-container-hdbk > div:hover {
+  border-color: rgba(197, 2, 190, 0.5);
+  transform: translateY(-3px);
+}
+

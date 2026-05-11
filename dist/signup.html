@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="./all.min.css" />
+    <title>Sign Up - Smart Stock</title>
+</head>
+
+<body class="bg-gray-900 flex items-center justify-center min-h-screen">
+    <div class="bg-gray-800 p-10 rounded-xl shadow-2xl w-full max-w-md border border-gray-700">
+        <h2 class="text-3xl font-bold text-green-500 mb-8 text-center">New Account</h2>
+        <form id="signupForm">
+            <input type="text" placeholder="Full Name" 
+                class="w-full p-3 mb-4 bg-gray-700 text-white rounded focus:ring-2 focus:ring-green-500 outline-none">
+            
+            <input type="email" id="signupEmail" placeholder="Email Address" required
+                class="w-full p-3 mb-4 bg-gray-700 text-white rounded focus:ring-2 focus:ring-green-500 outline-none">
+            
+            <input type="password" id="signupPassword" placeholder="Password" required
+                class="w-full p-3 mb-6 bg-gray-700 text-white rounded focus:ring-2 focus:ring-green-500 outline-none">
+            
+            <button type="submit" 
+                class="w-full py-3 bg-gray-900 text-white font-bold rounded-lg hover:bg-white hover:text-gray-900 mb-4 transition duration-300">
+                CREATE ACCOUNT
+            </button>
+            
+            <div class="text-center">
+                <span class="text-gray-500">Already have an account?</span>
+                <a href="login.html" class="text-green-700 hover:text-green-200"> Log In</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="profile/script.js"></script>
+</body>
+
+</html>

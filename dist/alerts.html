@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Alerts - Smart Stock Surveillance</title>
+    <link href="./src/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body class="flex h-screen bg-[#0d1117] text-white text-sm font-sans overflow-hidden">
+
+    <aside class="md:w-64 bg-[#0d1117] border-r border-gray-800 flex flex-col shrink-0 h-screen sticky top-0 font-sans">
+        <div class="p-6">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-green-500 rounded flex items-center justify-center">
+                    <span class="text-black font-black text-lg">S</span>
+                </div>
+                <span class="text-white font-bold text-xl tracking-tight">SmartStock</span>
+            </div>
+        </div>
+
+        <nav class="flex-1 px-4 space-y-2">
+            <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest px-2 mb-2">Main Menu</p>
+
+            <a href="overview.html" class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-gray-400 hover:text-green-500 hover:bg-green-500/5 rounded-lg transition-all group">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#75FB4C"><path d="M520-600v-240h320v240H520ZM120-440v-400h320v400H120Zm400 320v-400h320v400H520Zm-400 0v-240h320v240H120Zm80-400h160v-240H200v240Zm400 320h160v-240H600v240Zm0-480h160v-80H600v80ZM200-200h160v-80H200v80Zm160-320Zm240-160Zm0 240ZM360-280Z"/></svg>Overview
+
+            </a>
+
+            <a href="alerts.html" class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-gray-400 hover:text-green-500 hover:bg-green-500/5 rounded-lg transition-all group">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#75FB4C"><path d="M160-200v-80h80v-280q0-83 50-147.5T420-792v-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v28q80 20 130 84.5T720-560v280h80v80H160Zm320-300Zm0 420q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-280h320v-280q0-66-47-113t-113-47q-66 0-113 47t-47 113v280Z"/></svg>                Alerts
+            </a>
+
+            <a href="analytics.html" class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-gray-400 hover:text-green-500 hover:bg-green-500/5 rounded-lg transition-all group">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#75FB4C"><path d="M640-160v-280h160v280H640Zm-240 0v-640h160v640H400Zm-240 0v-440h160v440H160Z"/></svg>Analytics
+            </a>
+
+            <div class="my-6 border-t border-gray-800/50"></div>
+
+            <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest px-2 mb-2">Market Watch</p>
+            <a href="profile/comi.html" class="flex items-center justify-between px-4 py-3 text-sm font-medium text-gray-400 hover:text-green-500 hover:bg-green-500/5 rounded-lg transition-all group">
+                <span class="flex items-center gap-3">
+                    Stock Profile
+                </span>
+                <span class="text-[10px] bg-gray-800 px-1.5 py-0.5 rounded text-gray-500 group-hover:bg-green-500/20 group-hover:text-green-500">Live</span>
+            </a>
+        </nav>
+
+        <div class="p-6 border-t border-gray-800 bg-[#0d1117]">
+            <div class="flex items-center gap-2 mb-2">
+                <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                <span class="text-[10px] text-gray-400 font-semibold uppercase">System Online</span>
+            </div>
+            <p class="text-[9px] text-gray-600 italic">Smart Stock Surveillance</p>
+        </div>
+    </aside>
+    <main class="flex-1 p-8 overflow-y-auto">
+        <h1 class="text-2xl font-bold mb-8 italic">Stock Surveillance Alert Feed</h1>
+
+        <div id="stats-placeholder" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+
+            <div id="Card_COMI" class="p-5 rounded-xl border border-green-500/20 bg-[#161b22]">
+                <div class="flex justify-between text-[10px] text-gray-500 mb-2 font-mono"><span>10:30
+                        AM</span><span>10:30 AM</span></div>
+                <div class="font-bold text-lg font-mono text-white">COMI.CA</div>
+                <p class="text-gray-400 mt-1">Price crossed <span id="Price_COMI" class="text-white font-bold">--</span> EGP
+                </p>
+            </div>
+
+            <div id="Card_SAUD" class="p-5 rounded-xl border border-green-500/20 bg-[#161b22]">
+                <div class="flex justify-between text-[10px] text-gray-500 mb-2 font-mono"><span>10:28
+                        AM</span><span>10:28 AM</span></div>
+                <div class="font-bold text-lg font-mono text-white">SAUD.CA</div>
+                <p class="text-gray-400 mt-1">Nearing target price <span id="Price_SAUD" class="text-green-500 font-bold">(95%)</span></p>
+            </div>
+
+            <div id="Card_ADIB" class="p-5 rounded-xl border border-green-500/20 bg-[#161b22]">
+                <div class="flex justify-between text-[10px] text-gray-500 mb-2 font-mono"><span>10:25
+                        AM</span><span>10:25 AM</span></div>
+                <div class="font-bold text-lg font-mono text-white">ADIB.CA</div>
+                <p class="text-gray-400 mt-1">Price crossed <span id="Price_ADIB" class="text-white font-bold">--</span> EGP
+                </p>
+            </div>
+
+            <div id="Card_FAIT" class="p-5 rounded-xl border border-green-500/20 bg-[#161b22]">
+                <div class="flex justify-between text-[10px] text-gray-500 mb-2 font-mono"><span>10:20
+                        AM</span><span>10:20 AM</span></div>
+                <div class="font-bold text-lg font-mono text-white">FAIT.CA</div>
+                <p class="text-gray-400 mt-1">Pricing target price <span id="Price_FAIT" class="text-green-500 font-bold">(95%)</span></p>
+            </div>
+            <div id="Card_HDBK" class="p-5 rounded-xl border border-green-500/20 bg-[#161b22]">
+                <div class="flex justify-between text-[10px] text-gray-500 mb-2 font-mono"><span>10:15
+                        AM</span><span>10:15 AM</span></div>
+                <div class="font-bold text-lg font-mono text-white">HDBK.CA</div>
+                <p class="text-gray-400 mt-1">Nearing target price <span id="Price_HDBK" class="text-green-500 font-bold">(95%)</span></p>
+            </div>
+
+            
+        </div>
+
+        <h2 class="text-xl font-bold mb-6 italic text-gray-300">Alerts History</h2>
+        <div class="bg-[#161b22] border border-gray-800 rounded-2xl overflow-hidden shadow-2xl">
+            <table class="w-full text-left">
+                <thead class="bg-[#1c2128] text-gray-500 text-[10px] uppercase font-bold tracking-widest border-b border-gray-800">
+                    <tr>
+                        <th class="p-4">CreatedAt</th>
+                        <th class="p-4">Ticker</th>
+                        <th class="p-4">Alert Message</th>
+                        <th class="p-4">Status</th>
+                        <th class="p-4 text-center">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="text-[11px] text-gray-300 divide-y divide-gray-800/50">
+                    <tr id="Row_COMI">
+                        <td class="p-4 font-mono text-gray-500 italic">2026-04-10 10:30 AM</td>
+                        <td class="p-4 font-bold text-white italic">COMI.CA</td>
+                        <td class="p-4">Price crossed 75.00 EGP</td>
+                        <td class="p-4 text-green-500 font-bold">Active</td>
+                        <td class="p-4 text-center ">🔔</td>
+                    </tr>
+                    <tr id="Row_SAUD">
+                        <td class="p-4 font-mono text-gray-500 italic">2026-04-10 10:28 AM</td>
+                        <td class="p-4 font-bold text-white italic">SAUD.CA</td>
+                        <td class="p-4">Nearing target price (95%)</td>
+                        <td class="p-4 text-green-500 font-bold">Active</td>
+                        <td class="p-4 text-center">🔔</td>
+                    </tr>
+                    <tr id="Row_ADIB">
+                        <td class="p-4 font-mono text-gray-500 italic">2026-04-09 03:15 PM</td>
+                        <td class="p-4 font-bold text-white italic">ADIB.CA</td>
+                        <td class="p-4">Price crossed 42.50 EGP</td>
+                        <td class="p-4 text-gray-600">Dismissed</td>
+                        <td class="p-4 text-center opacity-30">🔔</td>
+                    </tr>
+                    <tr id="Row_FAIT">
+                        <td class="p-4 font-mono text-gray-500 italic">2026-04-09 01:20 PM</td>
+                        <td class="p-4 font-bold text-white italic">FAIT.CA</td>
+                        <td class="p-4">Pricing target reached</td>
+                        <td class="p-4 text-gray-600">Dismissed</td>
+                        <td class="p-4 text-center opacity-30">🔔</td>
+                    </tr>
+                    <tr id="Row_HDBK">
+                        <td class="p-4 font-mono text-gray-500 italic">2026-04-08 11:45 AM</td>
+                        <td class="p-4 font-bold text-white italic">HDBK.CA</td>
+                        <td class="p-4">New Resistance level alert</td>
+                        <td class="p-4 text-gray-600">Dismissed</td>
+                        <td class="p-4 text-center opacity-30">🔔</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script src="profile/script.js"></script>
+</body>
+
+</html>
